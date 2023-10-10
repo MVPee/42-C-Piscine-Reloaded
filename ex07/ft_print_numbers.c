@@ -3,16 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_numbers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mvpee <mvpee@19.be>                        +#+  +:+       +#+        */
+/*   By: mvan-pee <mvan-pee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/09 14:25:49 by mvpee             #+#    #+#             */
-/*   Updated: 2023/10/09 14:25:49 by mvpee            ###   ########.fr       */
+/*   Created: 2023/10/10 12:30:50 by mvan-pee          #+#    #+#             */
+/*   Updated: 2023/10/10 12:30:50 by mvan-pee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+void	ft_putchar(char a);
 
-void ft_print_numbers(void)
+void	ft_putstr(char *str)
 {
-    write(1, "0123456789", 10);
+	int	i;
+
+	i = -1;
+	while (str[++i])
+		ft_putchar(str[i]);
+}
+
+void	ft_print_numbers(void)
+{
+	ft_putstr("0123456789");
 }
